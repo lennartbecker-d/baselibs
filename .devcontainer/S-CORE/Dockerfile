@@ -15,7 +15,7 @@ ARG LLVM_VERSION=16
 #For Detailed design -> graphviz default-jre (we can preview puml files)
 #Utilities -> git, git-lfs and wget
 RUN apt-get update \
-    && apt-get -y install wget git git-lfs graphviz default-jre libtinfo5 g++-${GCC_VERSION} gdb googletest gcovr cmake clang-${LLVM_VERSION} clang-tidy-${LLVM_VERSION} clang-format-${LLVM_VERSION} \
+    && apt-get -y install wget git git-lfs graphviz default-jre libtinfo5 g++-${GCC_VERSION} gdb googletest gcovr cmake clang-${LLVM_VERSION} clang-tidy-${LLVM_VERSION} clang-format-${LLVM_VERSION} doxygen\
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 #specifying default versions via update alternatives functionality
